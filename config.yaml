@@ -1,0 +1,6 @@
+remote_api: "http://localhost:8080/api/v1/remotedb"
+local_addr: ":5431"
+poll_interval_ms: 250
+headers:
+  Authorization: "Bearer your-token"
+  X-Custom-Header: "value"
