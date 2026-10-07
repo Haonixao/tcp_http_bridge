@@ -1,6 +1,7 @@
 package http_tcp_connector
 
 // http_tcp_connector — a package that represents an integration layer with tcp_http_bridge. It translates HTTP requests into a TCP raw stream to the specified backend. For example, it allows connecting to a database via JDBC using the application as a proxy.
+// https://github.com/Haonixao/tcp_http_bridge
 
 import (
 	"bytes"
@@ -22,7 +23,7 @@ var (
 	RemoteDBAddr = "localhost:5432"
 
 	// Metadata — arbitrary meta-information that can be provided to the client
-	Metadata = make(map[string]interface{})
+	Metadata = make(map[string]any)
 
 	sessions = make(map[string]*Session)
 	mu       sync.RWMutex

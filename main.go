@@ -232,7 +232,7 @@ func fetchAndPrintMeta(cfg *Config) error {
 		return fmt.Errorf("remote returned status %d", resp.StatusCode)
 	}
 
-	var meta map[string]interface{}
+	var meta map[string]any
 	if err := json.NewDecoder(resp.Body).Decode(&meta); err != nil {
 		return err
 	}
